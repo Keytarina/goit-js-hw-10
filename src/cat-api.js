@@ -1,4 +1,4 @@
-export default fetchCatByBreed = (breedId, BASE_URL, API_KEY) => {
+export default function fetchCatByBreed(breedId, BASE_URL, API_KEY) {
   return fetch(`${BASE_URL}/images/search?breed_ids=${breedId}`, {
     headers: {
       'x-api-key': API_KEY,
@@ -9,4 +9,4 @@ export default fetchCatByBreed = (breedId, BASE_URL, API_KEY) => {
     }
     return response.json();
   });
-};
+}
